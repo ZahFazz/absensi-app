@@ -10,7 +10,7 @@ class AuthController extends Controller
     public function index()
     {
         return view('auth.login', [
-            "title" => "Masuk"
+            "title" => "Login"
         ]);
     }
 
@@ -24,14 +24,14 @@ class AuthController extends Controller
             $data = [
                 "success" => true,
                 "redirect_to" => auth()->user()->isUser() ? route('home.index') : route('dashboard.index'),
-                "message" => "Login berhasil, silahkan tunggu!"
+                "message" => "Login Success, Please Wait!"
             ];
             return response()->json($data);
         }
 
         $data = [
             "success" => false,
-            "message" => "Login gagal, silahkan coba lagi!"
+            "message" => "Login failed, Please try again!"
         ];
         return response()->json($data)->setStatusCode(400);
     }
@@ -43,6 +43,6 @@ class AuthController extends Controller
         request()->session()->regenerate();
         request()->session()->regenerateToken();
 
-        return redirect()->route('auth.login')->with('success', 'Anda berhasil keluar.');
+        return redirect()->route('auth.login')->with('success', 'Logout Successfully.');
     }
 }

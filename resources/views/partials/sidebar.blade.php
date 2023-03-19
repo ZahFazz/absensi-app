@@ -13,35 +13,35 @@
                 <a class="nav-link {{ request()->routeIs('positions.*') ? 'active' : '' }}"
                     href="{{ route('positions.index') }}">
                     <span data-feather="tag" class="align-text-bottom"></span>
-                    Jabatan / Posisi
+                    Teacher Subject
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ request()->routeIs('employees.*') ? 'active' : '' }}"
                     href="{{ route('employees.index') }}">
                     <span data-feather="users" class="align-text-bottom"></span>
-                    Karyawaan
+                    Teacher
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ request()->routeIs('holidays.*') ? 'active' : '' }}"
                     href="{{ route('holidays.index') }}">
                     <span data-feather="calendar" class="align-text-bottom"></span>
-                    Hari Libur
+                    Holiday
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ request()->routeIs('attendances.*') ? 'active' : '' }}"
                     href="{{ route('attendances.index') }}">
                     <span data-feather="clipboard" class="align-text-bottom"></span>
-                    Absensi
+                    Attendance
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ request()->routeIs('presences.*') ? 'active' : '' }}"
                     href="{{ route('presences.index') }}">
                     <span data-feather="clipboard" class="align-text-bottom"></span>
-                    Data Kehadiran
+                    Attendance Data
                 </a>
             </li>
             @endif
@@ -51,7 +51,7 @@
             onsubmit="return confirm('Apakah anda yakin ingin keluar?')">
             @method('DELETE')
             @csrf
-            <button class="w-full mt-4 d-block bg-transparent border-0 fw-bold text-danger px-3">Keluar</button>
+            <button class="w-full mt-4 d-block bg-transparent border-0 fw-bold text-danger px-3">Log out</button>
         </form>
     </div>
 </nav>

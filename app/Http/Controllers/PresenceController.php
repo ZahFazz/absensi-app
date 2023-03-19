@@ -17,7 +17,7 @@ class PresenceController extends Controller
         $attendances = Attendance::all()->sortByDesc('data.is_end')->sortByDesc('data.is_start');
 
         return view('presences.index', [
-            "title" => "Daftar Absensi Dengan Kehadiran",
+            "title" => "Attendance List",
             "attendances" => $attendances
         ]);
     }
@@ -28,7 +28,7 @@ class PresenceController extends Controller
 
         // dd($qrcode);
         return view('presences.show', [
-            "title" => "Data Detail Kehadiran",
+            "title" => "Attendance Details",
             "attendance" => $attendance,
         ]);
     }

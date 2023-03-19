@@ -10,14 +10,14 @@ class EmployeeController extends Controller
     public function index()
     {
         return view('employees.index', [
-            "title" => "Karyawaan"
+            "title" => "Teachers"
         ]);
     }
 
     public function create()
     {
         return view('employees.create', [
-            "title" => "Tambah Data Karyawaan"
+            "title" => "Add Teacher's Data"
         ]);
     }
 
@@ -34,7 +34,7 @@ class EmployeeController extends Controller
             ->get();
 
         return view('employees.edit', [
-            "title" => "Edit Data Karyawaan",
+            "title" => "Edit Teacher's Data",
             "employees" => $employees
         ]);
     }

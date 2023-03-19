@@ -10,14 +10,14 @@ class PositionController extends Controller
     public function index()
     {
         return view('positions.index', [
-            "title" => "Jabatan / Posisi"
+            "title" => "Subject"
         ]);
     }
 
     public function create()
     {
         return view('positions.create', [
-            "title" => "Tambah Data Jabatan / Posisi"
+            "title" => "Add subject"
         ]);
     }
 

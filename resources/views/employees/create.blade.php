@@ -5,7 +5,7 @@
     <div>
         <a href="{{ route('employees.index') }}" class="btn btn-sm btn-light">
             <span data-feather="arrow-left-circle" class="align-text-bottom"></span>
-            Kembali
+            Back
         </a>
     </div>
 </div>

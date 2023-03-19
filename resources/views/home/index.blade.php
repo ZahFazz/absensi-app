@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card shadow-sm mb-2">
                 <div class="card-header">
-                    Daftar Absensi Hari Ini
+                    Presence List Today
                 </div>
                 <div class="card-body">
                     <ul class="list-group">
@@ -27,12 +27,12 @@
         <div class="col-md-4">
             <div class="card shadow-sm">
                 <div class="card-header">
-                    Informasi Karyawan
+                    Teacher's Informations
                 </div>
                 <div class="card-body">
                     <ul class="ps-3">
                         <li class="mb-1">
-                            <span class="fw-bold d-block">Nama : </span>
+                            <span class="fw-bold d-block">Name : </span>
                             <span>{{ auth()->user()->name }}</span>
                         </li>
                         <li class="mb-1">
@@ -44,7 +44,7 @@
                             <a href="tel:{{ auth()->user()->phone }}">{{ auth()->user()->phone }}</a>
                         </li>
                         <li class="mb-1">
-                            <span class="fw-bold d-block">Bergabung Pada : </span>
+                            <span class="fw-bold d-block">Have been joined on : </span>
                             <span>{{ auth()->user()->created_at->diffForHumans() }} ({{
                                 auth()->user()->created_at->format('d M Y') }})</span>
                         </li>

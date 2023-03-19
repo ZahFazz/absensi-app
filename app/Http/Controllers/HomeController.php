@@ -21,7 +21,7 @@ class HomeController extends Controller
             ->sortByDesc('data.is_start');
 
         return view('home.index', [
-            "title" => "Beranda",
+            "title" => "Homepage",
             "attendances" => $attendances
         ]);
     }
@@ -70,7 +70,7 @@ class HomeController extends Controller
         $priodDate = array_slice(array_reverse($priodDate), 0, 30);
 
         return view('home.show', [
-            "title" => "Informasi Absensi Kehadiran",
+            "title" => "Attendance Information",
             "attendance" => $attendance,
             "data" => $data,
             "holiday" => $holiday,
@@ -82,7 +82,7 @@ class HomeController extends Controller
     public function permission(Attendance $attendance)
     {
         return view('home.permission', [
-            "title" => "Form Permintaan Izin",
+            "title" => "Permission Form",
             "attendance" => $attendance
         ]);
     }
@@ -105,13 +105,13 @@ class HomeController extends Controller
 
             return response()->json([
                 "success" => true,
-                "message" => "Kehadiran atas nama '" . auth()->user()->name . "' berhasil dikirim."
+                "message" => "Prensence of '" . auth()->user()->name . "' successfully saved ."
             ]);
         }
 
         return response()->json([
             "success" => false,
-            "message" => "Terjadi masalah pada saat melakukan absensi."
+            "message" => "Error while recording attendance."
         ], 400);
     }
 
@@ -123,7 +123,7 @@ class HomeController extends Controller
         if (!$attendance)
             return response()->json([
                 "success" => false,
-                "message" => "Terjadi masalah pada saat melakukan absensi."
+                "message" => "Error while recording attendance."
             ], 400);
 
         // jika absensi sudah jam pulang (is_end) dan tidak menggunakan qrcode (kebalikan)
@@ -140,7 +140,7 @@ class HomeController extends Controller
         if (!$presence) // hanya untuk sekedar keamanan (kemungkinan)
             return response()->json([
                 "success" => false,
-                "message" => "Terjadi masalah pada saat melakukan absensi."
+                "message" => "Error while recording attendance."
             ], 400);
 
         // untuk refresh if statement
@@ -149,7 +149,7 @@ class HomeController extends Controller
 
         return response()->json([
             "success" => true,
-            "message" => "Atas nama '" . auth()->user()->name . "' berhasil melakukan absensi pulang."
+            "message" => "Atas nama '" . auth()->user()->name . "' Home presence successfully recorded ."
         ]);
     }
 }

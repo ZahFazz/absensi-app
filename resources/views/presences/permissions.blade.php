@@ -5,7 +5,7 @@
     <div>
         <a href="{{ route('presences.show', $attendance->id) }}" class="btn btn-sm btn-light">
             <span data-feather="arrow-left-circle" class="align-text-bottom"></span>
-            Kembali
+            Back
         </a>
     </div>
 </div>
