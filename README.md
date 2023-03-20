@@ -1,5 +1,5 @@
 Group  : 4
-    1. Faradisha Aldina Putri (07)
+    1. Faradisha Aldina Putri (07
     2. Hafizh Zahrul Ifaz (11)
     3. Mayfana Laura Abdi (14)
     4. M. Fahmi Huwaidi (17)
